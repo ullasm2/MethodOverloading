@@ -1,0 +1,16 @@
+package org.india;
+
+public class Index {
+
+public static void main(String[] args) {
+
+String string1="GreensTechnology";
+int la = string1.lastIndexOf('o');
+System.out.println(la);
+
+String string2="SeleniumAutomationtool ";
+int ll = string2.lastIndexOf('o');
+System.out.println(ll);
+}
+
+}

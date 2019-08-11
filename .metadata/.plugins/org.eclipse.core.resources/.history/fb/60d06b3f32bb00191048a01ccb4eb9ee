@@ -1,0 +1,78 @@
+package org.india.SnapDeal;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SnapDeal {
+
+	public static void main(String[] args) throws AWTException {
+		
+		System.setProperty("webdriver.chromer.driver", "C:\\Users\\ullas\\eclipse-workspace\\Snapdeal\\driver\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+		
+					
+		driver.get("https://www.snapdeal.com/");
+		
+		
+		driver.manage().window().maximize();
+		
+		WebElement ab = driver.findElement(By.id("inputValEnter"));
+		ab.sendKeys("Iphonex");
+		
+		
+		Robot r = new Robot();
+r.keyPress(KeyEvent.VK_ENTER);	
+r.keyRelease(KeyEvent.VK_ENTER);
+
+driver.findElement(By.xpath("//p[text()='Apple iPhone X Plain Cases FONOVO - Blue']")).click();
+
+String parent = driver.getWindowHandle();
+System.out.println(parent);
+
+Set<String> all = driver.getWindowHandles();
+System.out.println(all);
+
+for(String x:all) {
+	
+	if(!parent.equals(x)) {
+		
+		
+		driver.switchTo().window(x);
+	}
+	
+	driver.findElement(By.xpath("//span[text()='add to cart']")).click();
+	
+	driver.findElement(By.xpath("//a[text()='Proceed To Checkout']")).click();
+	
+		
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		
+		
+		
+		
+	}
+
+

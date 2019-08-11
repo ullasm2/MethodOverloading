@@ -1,0 +1,10 @@
+package org.india.MavenDemo;
+
+public class Mavendemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package org.india;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchingBrowser {
+
+	// System.setProperty("key","Value")
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\ullas\\eclipse-workspace\\SeleniumLaunchingBrowser\\Driver\\chromedriver.exe");
+		
+WebDriver driver=new ChromeDriver();
+// To get the URL
+driver.get("https://www.facebook.com/");
+
+// To get the Title
+
+String title = driver.getTitle();
+System.out.println(title);
+
+// To get the current URL
+
+String currentUrl = driver.getCurrentUrl();
+System.out.println(currentUrl);
+
+		
+	}
+
+}

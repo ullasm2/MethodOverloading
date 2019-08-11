@@ -1,0 +1,86 @@
+
+
+
+import java.util.Date;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DragandDrop {
+	
+	static WebDriver driver;
+	
+	
+	@BeforeClass
+	
+	public static void Launch() {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\ullas\\eclipse-workspace\\Junit\\driver\\chromedriver.exe");
+		
+driver = new ChromeDriver();
+driver.get("http://demo.guru99.com/test/drag_drop.html");
+
+
+	}
+	
+			@AfterClass
+		public static void Close() {
+			//driver.close();
+				
+		}
+		
+			@Before
+	public void StartTime() {
+		Date Dt = new Date();
+		System.out.println(Dt);
+		
+
+	}		
+			
+			@After
+			
+			public void EndTime() {
+				Date Et = new Date();
+				System.out.println(Et);
+				
+
+			}
+			
+			@Test
+			
+			public void Logic() {
+				WebElement sr1 = driver.findElement(By.id("credit2"));
+				WebElement sr2 = driver.findElement(By.id("fourth"));
+				WebElement dr1 = driver.findElement(By.id("bank"));
+				WebElement dr2 = driver.findElement(By.id("amt7"));
+				
+				
+					
+				Actions acc = new Actions(driver);
+				acc.dragAndDrop(sr1, dr1);
+				acc.dragAndDrop(sr2, dr2);
+				
+				
+				
+
+			}
+			
+			
+			
+			
+			
+			
+			
+		
+		
+	}
+	
+	
+

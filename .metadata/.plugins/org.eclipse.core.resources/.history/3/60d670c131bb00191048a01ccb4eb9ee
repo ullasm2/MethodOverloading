@@ -1,0 +1,20 @@
+package org.india.SnapDeal;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SnapDeal {
+
+	public static void main(String[] args) {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\ullas\\eclipse-workspace\\SnapDeal\\driver\\chromedriver.exe");
+
+	WebDriver driver = new ChromeDriver();
+	
+	driver.get("https://www.snapdeal.com");
+	
+	
+	
+	
+	}
+
+}

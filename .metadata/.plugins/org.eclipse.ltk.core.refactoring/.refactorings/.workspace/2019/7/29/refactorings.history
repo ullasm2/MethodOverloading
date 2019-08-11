@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;PolymorphismOverloading&apos;" deleteContents="false" description="Delete resource &apos;PolymorphismOverloading&apos;" element1="/PolymorphismOverloading" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1563113192509"/>
+</session>

@@ -1,0 +1,13 @@
+package org.india;
+
+public class Index {
+
+public static void main(String[] args) {
+
+String string1="GreensTechnology";
+int la = string1.lastIndexOf('o');
+System.out.println(la);
+
+	}
+
+}
